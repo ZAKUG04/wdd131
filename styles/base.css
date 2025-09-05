@@ -81,26 +81,26 @@ footer {
     gap: 20px;
     background-color: white;
     padding: 20px;
-    border-radius: 15px; /* bordes menos cuadrados */
+    border-radius: 15px; 
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .card.two-columns .text {
-    flex: 1; /* ocupa espacio disponible para el texto */
+    flex: 1;
 }
 
 .card.two-columns .image {
-    flex: 1; /* ocupa espacio disponible para la imagen */
+    flex: 1; 
 }
 
 .card.two-columns img {
-    width: 80%;      /* la imagen ocupa solo el 80% del ancho del div */
-    max-width: 300px; /* ancho máximo fijo */
-    height: auto;     /* mantiene proporción */
+    width: 80%;      
+    max-width: 300px; 
+    height: auto;     
     object-fit: cover;
     border-radius: 12px;
     display: block;
-    margin: 0 auto;   /* centra la imagen dentro del div */
+    margin: 0 auto;   
 }
 
 @media (max-width: 768px) {
@@ -109,6 +109,6 @@ footer {
     }
 
     .card.two-columns img {
-        height: auto; /* altura automática para móviles */
+        height: auto; 
     }
 }
