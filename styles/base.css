@@ -1,8 +1,6 @@
-/* Fuentes desde Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -75,4 +73,42 @@ footer {
     color: white;
     padding: 20px 0;
     margin-top: 40px;
+}
+.card.two-columns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px; /* bordes menos cuadrados */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card.two-columns .text {
+    flex: 1; /* ocupa espacio disponible para el texto */
+}
+
+.card.two-columns .image {
+    flex: 1; /* ocupa espacio disponible para la imagen */
+}
+
+.card.two-columns img {
+    width: 80%;      /* la imagen ocupa solo el 80% del ancho del div */
+    max-width: 300px; /* ancho máximo fijo */
+    height: auto;     /* mantiene proporción */
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;   /* centra la imagen dentro del div */
+}
+
+@media (max-width: 768px) {
+    .card.two-columns {
+        flex-direction: column;
+    }
+
+    .card.two-columns img {
+        height: auto; /* altura automática para móviles */
+    }
 }
