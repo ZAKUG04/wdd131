@@ -1,0 +1,39 @@
+@media (min-width: 768px) {
+
+    /* Header nav visible y horizontal */
+    #nav-menu {
+    display: flex !important; /* forzar que siempre se muestre en desktop */
+    flex-direction: row;      /* links en fila */
+    justify-content: flex-end; /* alineados a la derecha */
+    gap: 1rem;
+    background-color: transparent; /* sin fondo */
+    position: static; /* que no flote encima */
+    width: auto;      /* que solo ocupe lo necesario */
+    padding: 0;
+}
+
+    #hamburger {
+        display: none;
+    }
+
+    header {
+        padding: 1rem 2rem;
+    }
+
+    /* Main - grid con 3 columnas */
+    main {
+        max-width: 1000px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    main figure img {
+        width: 100%;        /* ocupa ancho de columna */
+        height: 200px;      /* mantiene altura uniforme */
+        object-fit: cover;
+    }
+    header h1 {
+    transition: opacity 0.3s ease;
+}
+}
