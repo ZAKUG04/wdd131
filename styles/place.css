@@ -1,0 +1,201 @@
+:root{
+  --primary-red: #c8102e;
+  --accent-green: #0b6b45d8;
+  --card-bg: rgba(255, 255, 255, 0.858);
+  --text: #222;
+  --max-width: 100%;
+}
+
+*{ 
+    box-sizing:border-box; 
+}
+
+body{
+  margin:0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color:var(--text);
+  display:flex;
+  flex-direction:column;
+
+}
+
+/* HEADER */
+.site-header{
+  width:100%;
+  background:var(--primary-red);
+  color:#fff;
+  text-align:center;
+  padding:1.25rem 1rem;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.1);
+}
+.site-header::after{
+  content:"";
+  display:block;
+  height:8px;
+}
+.site-title{ 
+    margin:0; 
+    font-size:4rem; 
+    font-weight:700; 
+}
+
+/* HERO */
+.hero {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  position: relative; 
+  height: auto;
+}
+
+.hero picture,
+.hero img {
+  width: 100%;        
+  height: 90%;      
+  display: block;     /* elimina espacios debajo de la imagen */
+  object-fit: fill;  
+
+}
+
+/* CARDS */
+.card{
+  background:var(--card-bg);
+  margin:2rem auto;
+  width:calc(94%);
+  max-width:450px;
+  text-align: center;
+  border-radius:2px;
+  overflow:hidden;
+}
+.card__header{
+  padding:0.9rem 1rem;
+  font-weight:700;
+  font-size:2rem;
+  background:transparent;
+  color:var(--accent-green);
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column;
+  
+}
+ .card__header .mobile-icon {
+    display: inline-block;  
+    margin-top: 2rem;  
+ }
+.card__body{
+  padding:1rem;
+  color:var(--text);
+  line-height:1.5;
+}
+.card__body dl{ 
+    margin:0; 
+}
+.card__body dt{
+     font-weight:600; 
+     display:inline; 
+    }
+.card__body dd{ 
+    display:inline; 
+    margin:0 0 0 .4rem; 
+}
+.card__body dt::before {
+    content: "\A";          
+    white-space: pre;    
+}
+.mobile-icon{ /* la imagen del weather para que sea editable */
+    max-width: 100px;
+    max-height: 90px;
+    object-fit: cover;
+    display: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* FOOTER */
+.site-footer{
+  width:100%;
+  background:var(--primary-red);
+  color:#fff;
+  text-align:center;
+  padding:1rem;
+  margin-top: auto;
+}
+
+/* Desktop / Wide view */
+@media (min-width: 800px) {
+  .hero img{ 
+    height:520px; 
+
+}
+
+.card__body dt{
+     font-weight:600; 
+     display:inline; 
+    }
+.card__body dd{ 
+    display:inline; 
+    margin-left:0.4rem; 
+    margin-right: 1rem;
+}
+.card__body dt::before {
+    content: "\A";         
+    white-space: pre;    
+}
+  .card{
+    width:300px;
+    max-width:none;
+    margin:0;
+    background:var(--card-bg);
+    text-align: left;
+    position: relative;
+    overflow: visible;
+  }
+
+  .card__header{
+    background:var(--accent-green);
+    color:#fff;
+    padding:1rem;
+    margin: 10px 15px 10px 0px;
+    font-size: 1.1rem;
+    justify-content: left;
+    align-items: first baseline;
+    flex-direction: row;
+    z-index: 2;
+    margin-bottom: -0.5rem;
+    top: -10px;
+  }
+.card__body{
+  padding: 1rem;
+  position: relative;
+  z-index: 1;
+
+    
+}
+  /* Cards posicionadas sobre la imagen */
+  .card--data{
+    position:absolute;
+    left:40px;
+    top:90px;
+  }
+  .card--weather{
+    position:absolute;
+    right:40px;
+    bottom:10px;
+    
+  }
+
+  .card--weather .card__header::after{
+    content: " ⛅";
+    margin-left:8px;
+    font-size:1.1rem;
+  }
+
+  .mobile-icon{ display:none; }
+}
+@media (min-width: 800px) {
+  .mobile-icon {
+    display: none !important;
+    
+  }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Madagascar — Place Page</title>
+  <meta name="description" content="page Madagascar — wdd131 W03">
+  <link rel="stylesheet" href="styles/place.css">
+  <script defer src="scripts/place.js"></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <h1 class="site-title">Madagascar</h1>
+  </header>
+
+  <!-- HERO + CARDS -->
+  <main>
+    <section class="hero" aria-label="Hero image">
+  <picture>
+    <!-- Desktop -->
+    <source media="(max-width: 700px)" srcset="images/Lemures+2.jpg">
+    <!-- Mobile / fallback -->
+    <img src="images/madagascar.jpg" alt="Anillos de lemures sobre un tronco" loading="lazy" class="firt-img">
+  </picture>
+
+      <!-- Cards -->
+      <aside class="card card--data" aria-labelledby="data-title">
+        <div id="data-title" class="card__header">Data</div>
+        <div class="card__body">
+          <dl>
+            <dt>Area:</dt><dd>587,041 sq km</dd>
+            <dt>Population:</dt><dd>27,691,018</dd>
+            <dt>Capital:</dt><dd>Antananarivo</dd>
+            <dt>Languages:</dt><dd>Malagasy, French</dd>
+            <dt>Currency:</dt><dd>Malagasy Ariary</dd>
+            <dt>Time Zone:</dt><dd>UTC+3</dd>
+            <dt>Calling Code:</dt><dd>+261</dd>
+            <dt>Internet TLD:</dt><dd>.mg</dd>
+          </dl>
+        </div>
+      </aside>
+
+      <aside class="card card--weather" aria-labelledby="weather-title">
+        <div id="weather-title" class="card__header">
+          <span>Weather</span>
+          <img src="images/weather-icon-md.svg" alt="Partly cloudy" class="mobile-icon" aria-hidden="true">
+        </div>
+        <div class="card__body">
+          <p>Temperature: <strong><span id="temp">10</span> °C</strong></p>
+          <p>Conditions: <strong>Partly Cloudy</strong></p>
+          <p>Wind: <strong><span id="wind">5</span> km/h</strong></p>
+          <p>Wind Chill: <strong><span id="windchill">N/A</span></strong></p>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>©<span id="year"></span> 👻 Nefi Zambranoo ☃️ Madagascar</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
