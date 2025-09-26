@@ -91,7 +91,7 @@ const temples = [
 ];
 function displayTemples(templeArray) {
   const container = document.getElementById('temple-container');
-  container.innerHTML = ''; // limpiar antes de mostrar
+  container.innerHTML = ''; 
 
   templeArray.forEach((temple) => {
     const card = document.createElement('div');
@@ -108,7 +108,7 @@ function displayTemples(templeArray) {
   });
 }
 
-// Mostrar todos los templos al cargar la página
+
 displayTemples(temples);
 document.getElementById('home-btn').addEventListener('click', () => displayTemples(temples));
 
