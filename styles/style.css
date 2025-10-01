@@ -1,0 +1,110 @@
+/* Colores */
+:root {
+    --negro-oscuro: #1B1B1B;
+    --neon-rosa: #FF6EC7;
+    --morado-claro: #9B59B6;
+    --verde-menta: #2ECC71;
+}
+
+/* Tipografía */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--negro-oscuro);
+    color: white;
+    margin: 0;
+    padding: 0 1rem;
+}
+
+h1, h2, h3 {
+    font-family: 'Press Start 2P', cursive;
+    color: var(--neon-rosa);
+}
+h1{
+    font-size: 3vh;
+}
+
+a {
+    color: var(--morado-claro);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--verde-menta);
+}
+
+/* Logo */
+.logo {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Navegación lateral */
+.nav-lateral {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #222;
+    padding-top: 2rem;
+    letter-spacing: 0.2rem;
+     
+}
+
+.nav-lateral ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-lateral li {
+    margin: 1rem 0;
+}
+
+.nav-lateral a {
+    color: white;
+    font-weight: bold;
+}
+
+/* Main content */
+main {
+    margin-left: 220px; /* espacio para la nav lateral */
+    padding: 1rem;
+}
+
+/* Secciones */
+section {
+    margin: 2rem 0;
+    padding: 1rem;
+    border-left: 5px solid var(--verde-menta);
+    background-color: #2c2c2c;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #222;
+    color: white;
+}
+img{
+    flex-direction: row-reverse;
+    width: 360px;
+}
+/* Responsive - móvil */
+@media (max-width: 768px) {
+    .nav-lateral {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 0.5rem 0;
+        display: flex;
+        justify-content: space-around;
+        background-color: #111;
+    }
+
+    main {
+        margin-left: 0;
+    }
+}
