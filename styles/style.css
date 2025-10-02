@@ -48,6 +48,10 @@ a:hover {
     padding-left: 1rem;
     line-height: 1.5rem;
 }
+.logo-text span {
+    display: block; /* cada span ocupa su propia línea */
+    line-height: 1.2;
+}
 /* Navegación lateral */
 .nav-lateral {
     position: fixed;
@@ -56,35 +60,37 @@ a:hover {
     width: 200px;
     height: 100%;
     background-color: #222;
-    padding-top: 2rem;
-    letter-spacing: 0.2rem;
-     
+    padding: 2rem 1rem 3.5rem;
 }
 
 .nav-lateral ul {
     list-style: none;
+    margin: 2rem 0 0 0;
     padding: 0;
-    margin-top: 3rem;
 }
 
 .nav-lateral li {
-    margin: 1rem 0;
+    margin: 2rem 0;
 }
 
 .nav-lateral a {
     color: white;
     font-weight: bold;
+    display:block;
+    padding-left: 0.4rem;
 }
-
 /* Main content */
 main {
     margin-left: 220px; /* espacio para la nav lateral */
     padding: 1rem;
     display: grid;
-    
-    
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: auto auto auto;
+    gap: 2rem;
 }
-
+.bottom-nav {
+  display: none;
+}
 /* Secciones */
 section {
     margin: 2rem 0;
@@ -102,24 +108,147 @@ footer {
     padding: 1rem;
     background-color: #222;
     color: white;
+        padding: 20px 0;
+    margin-top: 40px;
 }
 img{
     flex-direction: row-reverse;
     width: 360px;
 }
-/* Responsive - móvil */
-@media (max-width: 768px) {
-    .nav-lateral {
-        position: static;
-        width: 100%;
-        height: auto;
-        padding: 0.5rem 0;
-        display: flex;
-        justify-content: space-around;
-        background-color: #111;
-    }
 
-    main {
-        margin-left: 0;
-    }
+.Sname {
+    grid-column: 1 / 2; 
+    grid-row: 1 / 3;  /* ocupa dos filas */
+}
+
+.purpose {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.sce {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.colors {
+    grid-column: 1 / 3; /* ocupa todo abajo */
+    grid-row: 3 / 4;
+}
+.lang-btn {
+  margin-top: auto;           /* empuja el botón al final del contenedor flex */
+  align-self: center;        /* centro horizontalmente en el nav */
+  background: none;
+  border: 2px solid var(--neon-rosa);
+  color: var(--neon-rosa);
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: .2s ease;
+  margin: 350px 10px auto 20px;
+}
+.lang-btn:hover,
+.lang-btn:focus {
+  background: var(--neon-rosa);
+  color: #111;
+  outline: none;
+}
+
+/* ---- 📱 Mobile ---- */
+@media (max-width: 768px) {
+  /* nav lateral se convierte en bloque arriba */
+  .nav-lateral {
+    position: static;
+    width: 100%;
+    height: auto;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  .nav-lateral h1 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .nav-lateral ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+  }
+
+  .nav-lateral ul li {
+    width: 80%;
+    margin: 0.8rem 0;
+  }
+
+  .nav-lateral ul li a {
+    display: block;
+    padding: 1.2rem;
+    background: #222;
+    border-radius: 12px;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  /* el main ya no deja espacio lateral */
+  main {
+    margin-left: 0;
+    display: block; /* apilar secciones */
+  }
+
+  /* bottom nav visible */
+  .bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #1b1b1b;
+    border-top: 1px solid #333;
+    padding: 0.5rem 0;
+    z-index: 1000;
+  }
+
+  .bottom-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.75rem;
+    text-align: center;
+    flex: 1;
+  }
+
+  .bottom-nav a i {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+  }
+  .nav-lateral ul{
+    display: none;
+  }
+  .nav-lateral li{
+    display: none;
+  }
+  .lang-btn{
+    display: none;
+  }
+  .nav-lateral h1{
+    font-size: 5vh;
+    margin-bottom: 2rem;
+    text-align: center;
+    
+  }
+  footer{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 80px;
+
+  }
 }

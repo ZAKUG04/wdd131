@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Vault - Site Plan</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <!-- Gamer style fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Lateral navigation for desktop -->
+    <nav class="nav-lateral">
+    <h1 class="logo-text">GAMING <br> VAULT</h1>
+    
+    <ul>
+        <li><a href="/siteplan.html">Home</a></li>
+        <li><a href="#">Wiki</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Tips</a></li>
+    </ul>
+    <button id="btn-lang" class="lang-btn">文</button>
+</nav>
+
+    <main>
+        <!-- 1. Site Name -->
+        <section class="Sname">
+            <h2>welcome</h2>
+            <p><strong>Gaming Vault</strong> – A place where gamers find information, tips, news, and everything about their favorite games.
+            <em>Optional domain:</em> gamingvault.org</p>
+        </section>
+
+        <!-- 2. Site Purpose -->
+        <section class="purpose">
+            <h2>Site Purpose</h2>
+            <p>Gaming Vault serves as a complete platform for gamers, offering: game information, recent news, tips, and guides to improve in their favorite video games.</p>
+        </section>
+
+        <!-- 3. User Scenarios -->
+        <section class="sce">
+            <h2></h2>
+            <ul>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Gaming Vault | All rights reserved</p>
+    </footer>
+</body>
+<script>
+    const btnLang = document.getElementById("btn-lang");
+    let lang = "en"; // idioma actual
+
+    btnLang.addEventListener("click", () => {
+        lang = lang === "en" ? "es" : "en";
+
+        document.querySelectorAll("nav ul li a").forEach(link => {
+            link.textContent = link.dataset[lang];
+        });
+
+        // Opcional: cambia también títulos de secciones
+        document.querySelectorAll("section h2").forEach(h2 => {
+            if (h2.dataset.en && h2.dataset.es) {
+                h2.textContent = h2.dataset[lang];
+            }
+        });
+    });
+</script>
+</html>

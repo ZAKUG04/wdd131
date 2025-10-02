@@ -8,36 +8,41 @@
     <!-- Gamer style fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <!-- Lateral navigation for desktop -->
     <nav class="nav-lateral">
-    <h1 class="logo-text">GAMING <br> VAULT</h1>
+    <h1 class="logo-text">
+        <span>GAMING</span>
+        <span>VAULT</span>
+    </h1>
     <ul>
-        <li><a href="#">Inicio</a></li>
+        <li><a href="/page/home.html">Home</a></li>
         <li><a href="#">Wiki</a></li>
-        <li><a href="#">Noticias</a></li>
+        <li><a href="#">News</a></li>
         <li><a href="#">Tips</a></li>
     </ul>
+    <button id="btn-lang" class="lang-btn">文</button>
 </nav>
 
     <main>
         <!-- 1. Site Name -->
-        <section>
+        <section class="Sname">
             <h2>Site Name</h2>
             <p><strong>Gaming Vault</strong> – A place where gamers find information, tips, news, and everything about their favorite games.
             <em>Optional domain:</em> gamingvault.org</p>
         </section>
 
         <!-- 2. Site Purpose -->
-        <section>
+        <section class="purpose">
             <h2>Site Purpose</h2>
             <p>Gaming Vault serves as a complete platform for gamers, offering: game information, recent news, tips, and guides to improve in their favorite video games.</p>
         </section>
 
         <!-- 3. User Scenarios -->
-        <section>
+        <section class="sce">
             <h2>User Scenarios</h2>
             <ul>
                 <li>"What is the best strategy for game X?"</li>
@@ -46,7 +51,7 @@
         </section>
 
         <!-- 4. Color Scheme -->
-        <section>
+        <section class="colors">
             <h2>Color Scheme</h2>
             <ul>
                 <li><strong>Dark Black:</strong> #1B1B1B – general background.</li>
@@ -56,22 +61,21 @@
             </ul>
         </section>
 
-        <!-- 5. Typography -->
-        <section>
-            <h2>Typography</h2>
-            <ul>
-                <li><strong>Press Start 2P:</strong> Headings and titles for gamer style.</li>
-                <li><strong>Roboto:</strong> Body text and paragraphs, easy to read.</li>
-            </ul>
-        </section>
-
-        <!-- 6. Wireframes -->
+        <!-- 5. Wireframes -->
         <section>
             <h2>Wireframes</h2>
             <p>Mobile version wireframe (logo on top, bottom bar with icons):</p>
             <img src="images/wireframe_movil.png" alt="Mobile wireframe Gaming Vault">
             <p>Desktop version wireframe (left side bar, main sections):</p>
             <img src="images/wireframe_pc.png" alt="Desktop wireframe Gaming Vault">
+        </section>
+        <!-- 6. Typography -->
+        <section>
+            <h2>Typography</h2>
+            <ul>
+                <li><strong>Press Start 2P:</strong> Headings and titles for gamer style.</li>
+                <li><strong>Roboto:</strong> Body text and paragraphs, easy to read.</li>
+            </ul>
         </section>
 
         <!-- 7. Testing / Validations -->
@@ -84,6 +88,12 @@
             </ul>
         </section>
     </main>
+    <div class="bottom-nav">
+    <a href="/page/home.html"><i class="fa-solid fa-house"></i><span>Inicio</span></a>
+    <a href="#"><i class="fa-solid fa-book"></i><span>Wiki</span></a>
+    <a href="#"><i class="fa-solid fa-newspaper"></i><span>Noticias</span></a>
+    <a href="#"><i class="fa-solid fa-lightbulb"></i><span>Tips</span></a>
+</div>
 
     <footer>
         <p>&copy; 2025 Gaming Vault | All rights reserved</p>
